@@ -1,0 +1,22 @@
+name: Publish
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  deploy:
+    if: vars.DEPLOYMENT_BUCKET != '' && vars.CLOUDFRONT_DISTRIBUTION_ID != ''
+    uses: thaiv28/project-platform-workflows/.github/workflows/deploy-static.yml@main
+    with:
+      project_slug: resume
+      bucket_name: ${{ vars.DEPLOYMENT_BUCKET }}
+      distribution_id: ${{ vars.CLOUDFRONT_DISTRIBUTION_ID }}
+      health_url: https://resume.thaiv.dev/
+    secrets:
+      AWS_ROLE_ARN: ${{ secrets.AWS_ROLE_ARN }}

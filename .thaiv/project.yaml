@@ -1,0 +1,9 @@
+version: 1
+project:
+  slug: resume
+artifact:
+  type: static
+  buildCommand: npm run build
+  outputDirectory: dist
+health:
+  path: /
