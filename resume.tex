@@ -1,0 +1,179 @@
+%-------------------------
+% Resume in LaTeX
+% Author: Jake Gutierrez
+% Based on: https://github.com/sb2nov/resume
+% License: MIT
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that the generated PDF is machine-readable and ATS-parsable.
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+
+\newcommand{\resumeMultiSubheading}[2]{
+  \vspace{-4pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeItem}[1]{
+  \item\small{#1 \vspace{-2pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Thai Villaluna} \\ \vspace{6pt}
+    \small 626-823-4800 $|$ \href{mailto:thaivillaluna@gmail.com}{\underline{thaivillaluna@gmail.com}} $|$
+    Santa Cruz, CA $|$
+    \href{https://linkedin.com/in/thaivillaluna}{\underline{linkedin.com/in/thaivillaluna}} $|$
+    \href{https://github.com/thaiv28}{\underline{github.com/thaiv28}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+\vspace{4pt}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of California, Santa Cruz}{Santa Cruz, CA}
+      {GPA: 4.0 $|$ Bachelor of Science in Computer Science, Minor in Statistics}{Expected June 2027}
+
+    \vspace{8pt}
+    {\small \textbf{Relevant Coursework:} Data Structures and Algorithms, Analysis of Algorithms, Computer Networking}{}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\vspace{4pt}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Amazon Web Services (AWS) -- Global Accelerator}{Seattle, WA}
+      {Software Development Engineer Intern}{June 2025 -- September 2025}
+      \resumeItemListStart
+        \resumeItem{Automated load testing for AWS Global Accelerator during code deployment, saving approximately 400 developer hours annually and ensuring consistent performance across more than 20 regions.}
+        \resumeItem{Refactored the CI/CD pipeline for a low-level networking application, increasing integration test frequency by 270\% and accelerating the feedback loop for more than 12 developers.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {University of California, Santa Cruz}{Santa Cruz, CA}
+      {Group Tutor $|$ Data Structures and Algorithms, Machine Learning Basics}{April 2024 -- Present}
+      \resumeItemListStart
+        \resumeItem{Lead biweekly tutoring sessions for multiple courses, helping dozens of students understand core concepts and complete assignments.}
+        \resumeItem{Collaborate with professors to design, test, and refine course assignments for hundreds of students.}
+      \resumeItemListEnd
+
+    \resumeMultiSubheading
+      {Undergraduate Researcher $|$ IRKM Lab}{September 2024 -- May 2025}
+      \resumeItemListStart
+        \resumeItem{Developed Agent Confidence Estimation (ACE), a modular framework for integrating interchangeable models, datasets, and prompts to analyze confidence and uncertainty in large language models.}
+        \resumeItem{Implemented baseline confidence estimation techniques for AI agents by evaluating semantic similarity across generated response sets.}
+      \resumeItemListEnd
+
+    \resumeMultiSubheading
+      {Grader $|$ Data Structures and Algorithms}{June 2024 -- August 2024}
+      \resumeItemListStart
+        \resumeItem{Compiled and executed student assignments through the MOSS code similarity detector, then manually analyzed results to identify plagiarism.}
+        \resumeItem{Graded hundreds of handwritten pseudocode submissions for logical correctness and time complexity analysis.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Yao Engineering}{Remote}
+      {Research Intern}{January 2024 -- July 2024}
+      \resumeItemListStart
+        \resumeItem{Developed a joint multinomial and categorical Naive Bayes model to classify government contracts based on suitability for the company, achieving 94\% accuracy.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{Farsight} $|$ \emph{Python, PyTorch, SQL, AWS, PostgreSQL}}{October 2024}
+      \resumeItemListStart
+        \resumeItem{Developed and trained a neural network to predict player performance metrics in League of Legends esports matches.}
+        \resumeItem{Constructed a dataset of more than 600{,}000 matches by designing and querying a PostgreSQL database hosted on AWS.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, Java, C, C++, SQL, TypeScript} \\
+     \textbf{Frameworks \& Tools}{: PyTorch, Pandas, NumPy, Spring} \\
+     \textbf{Web}{: HTML, CSS, JavaScript}
+    }}
+ \end{itemize}
+
+%-----------AWARDS & INTERESTS-----------
+\section{Awards \& Interests}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      \textbf{Awards:} National Merit Scholar, Eagle Scout, AP Scholar with Distinction, California Scholarship Federation \\
+      \textbf{Interests:} Board games, ultimate frisbee, reading, running, hiking, NBA
+    }}
+  \end{itemize}
+
+\end{document}

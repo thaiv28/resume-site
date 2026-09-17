@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "resume:build": "bash scripts/build-resume.sh",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
